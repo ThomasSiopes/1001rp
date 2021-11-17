@@ -37,7 +37,7 @@ function Freethinkers () {
     return (
         <Container>
             <MetaTags>
-                <title>1001 Nuggets - Authors</title>
+                <title>1001 Red Pills - Authors</title>
             </MetaTags>
             <Card>
                 <Card.Header><Link className="link-theme" to={`/`}>Home</Link> {`>`} Authors</Card.Header>

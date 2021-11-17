@@ -5,12 +5,12 @@ export const defaultTheme = {
 }
 
 export const newTheme = {
-    c1: "#262",
+    c1: "#6f2f2f",
     c2: "#222",
-    c3: "#ddd",
+    c3: "#311",
     button: {
-        c1: "#373",
-        c2: "#151",
+        c1: "#733",
+        c2: "#511",
     },
     weakButton: {
         c1: "#fff",
@@ -19,8 +19,8 @@ export const newTheme = {
 }
 
 export const GlobalStyles = createGlobalStyle`
-    .navbar {
-        background-color: ${(props) => props.theme.c1};
+    .navbar, .bg-none {
+        background-color: transparent!important;
     }
 
     a {
@@ -32,11 +32,15 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     .bg-theme {
-        background-color: ${(props) => props.theme.c1};
+        background-color: ${(props) => props.theme.c3};
     }
 
     body { 
-        background-color: ${(props) => props.theme.c3};
+        background-image: url("/assets/images/thumbnails/bg.png");
+        background-size: 100% 100%;
+        background-position: top;
+        background-repeat: no-repeat;
+        background-color: #333;
     }
 
     .btn-block {
@@ -71,10 +75,6 @@ export const GlobalStyles = createGlobalStyle`
         border-color: #ccc!important;
     }
 
-    .card-footer .btn {
-        border-color: #fff;
-    }
-
     .card-title {
         font-weight: 600;
     }
@@ -85,6 +85,10 @@ export const GlobalStyles = createGlobalStyle`
 
     #footer-img {
         width: 70%;
+    }
+
+    #footer-supreme {
+        border: none!important;
     }
 
     .link-theme {
@@ -115,15 +119,23 @@ export const GlobalStyles = createGlobalStyle`
         max-width: 7%;
     }
 
+    .navbar-dark .nav-link {
+        color: white!important;
+    }
+
+    .navbar-dark .nav-link:hover {
+        color: white!important;
+    }
+
     .hoverable {
-        border-top: 0.1rem solid;
-        border-bottom: 0.1rem solid;
-        border-color: ${(props) => props.theme.c1};
+        border-top: 0.15rem solide;
+        border-bottom: 0.15rem solid;
+        border-color: white;
     }
 
     .hoverable:hover {
-        border-color: white;
-        transition: all 0.7s ease;
+        border-bottom-color: transparent;
+        transition: all 0.5s ease;
     }
 
     .quote-body, .quote-preview {

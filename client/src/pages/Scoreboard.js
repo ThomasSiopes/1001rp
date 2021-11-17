@@ -32,7 +32,7 @@ function Scoreboard() {
     return (
         <Container>
             <MetaTags>
-                <title>1001 Nuggets</title>
+                <title>1001 Red Pills</title>
             </MetaTags>
             <Card>
                 <Card.Body>

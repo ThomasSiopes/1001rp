@@ -4,19 +4,19 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 
 const FooterPage = () => {
     return (
-        <Card id="footer-supreme" className="bg-theme text-center text-white mt-4 py-4">
+        <Card id="footer-supreme" bg={"none"} className="text-center text-white mt-4 py-4">
             <Container>
                 <Row>
-                    <Col xs={12} md={4} className="d-flex font-Lato">
+                    <Col xs={12} md={3} className="d-flex font-Lato">
                         <Container className="align-self-center">
-                            <Link to={`/`} className="navbar-brand text-white"><img src="/assets/images/thumbnails/background-copy.png" id="footer-img" alt="Footer Icon"/></Link>
+                            <Link to={`/`} className="navbar-brand link-theme"><img src="/assets/images/thumbnails/background-copy.png" id="footer-img" alt="Footer Icon"/></Link>
                         </Container>
                     </Col>
-                    <Col xs={12} md={4} className="align-self-center mb-3">
+                    <Col xs={12} md={6} className="align-self-center mb-3">
                         <span>Website Description. Maybe about us section? Copyright info? Anything relevant in text form.</span>
                     </Col>
-                    <Col xs={12} md={4}>
-                        Site
+                    <Col xs={12} md={3}>
+                        Quick Links
                         <hr></hr>
                         <i>
                             <p><Link className="text-white" to={`/`}>Home</Link></p>

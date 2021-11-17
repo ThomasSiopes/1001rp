@@ -84,9 +84,9 @@ function App() {
               <Route exact path="/search/:query">
                 <SearchResult/>
               </Route>
-              <Route exact path="/0504">
+              {/* <Route exact path="/0504">
                 <Scoreboard/>
-              </Route>
+              </Route> */}
               <Route component={ErrorPage}/>
             </Switch>
           </StyledApp>

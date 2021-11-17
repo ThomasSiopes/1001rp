@@ -32,17 +32,17 @@ function Quote () {
     return (
         <Container>
             <MetaTags>
-                <title>1001 Nuggets - {quote.author} - {quote.quoteText}</title>
+                <title>1001 Red Pills - {quote.author} - {quote.quoteText}</title>
             </MetaTags>
             <Card>
                 <Card.Header><Link to={`/`} className="link-theme">Home</Link> {`>`} <Link to={`/authors`} className="link-theme">Authors</Link> {`>`} <AuthorButton type={"link"} name={quote.author}/> {`>`} Quotes</Card.Header>
                 <Card.Body>
                     <Row>
-                        <Col xs={12}>
+                        <Col xs={12} lg={8}>
                             <Card className="mb-3">
                                 <div id="quote-page">
                                     <Card.Body>
-                                        <Card.Text className="display-6"><span className="quote-body font-poppins" id="main-quote">" {quote.quoteText} "</span></Card.Text>
+                                        <Card.Text className="display-6"><span className="quote-body font-poppins" id="main-quote">"{quote.quoteText}"</span></Card.Text>
                                         <Card.Text><strong><AuthorButton type={"link"} name={quote.author}/></strong></Card.Text>
                                     </Card.Body>
                                     <Card.Body className="text-center">
@@ -60,7 +60,7 @@ function Quote () {
                                 }
                             </Card>
                         </Col>
-                        <Col xs={12}>
+                        <Col xs={12} lg={4}>
                             <Row>
                                 <MoreAuthor parent={quote} name={quote.author}/>
                                 { quote.topics[0] &&

@@ -85,6 +85,7 @@ const CurrentQuestion = () => {
 
     return (
         <Card>
+            <Card.Header className="text-center">Questionnaire</Card.Header>
             <Card.Body className="text-center">
                 { question.end === false &&
                     <div className="card-text">

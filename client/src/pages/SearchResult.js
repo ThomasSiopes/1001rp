@@ -15,7 +15,7 @@ function SearchResults() {
         <Container className="auttopBody">
             <div className="wrapper">
                 <MetaTags>
-                    <title>1001 Nuggets - {query}</title>
+                    <title>1001 Red Pills - {query}</title>
                 </MetaTags>
             </div>
             <Card>

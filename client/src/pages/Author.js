@@ -30,7 +30,7 @@ function Author () {
     return (        
         <Container>
             <MetaTags>
-                <title>1001 Nuggets - {author.name}</title>
+                <title>1001 Red Pills - {author.name}</title>
             </MetaTags>
             <Card>
                 <Card.Header><Link className="link-theme" to={`/`}>Home</Link> {`>`} <Link className="link-theme" to={`/authors`}>Authors</Link> {`>`} {author.name}</Card.Header>

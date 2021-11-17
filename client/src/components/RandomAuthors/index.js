@@ -25,7 +25,6 @@ const RandomAuthors = () => {
     
     return(
         <Card className="text-center">
-            <Card.Header>Random Authors</Card.Header>
             <Card.Body>
                 <Row>
                     {newList.map((index) => (

@@ -40,7 +40,7 @@ function TopicNavigation () {
     return (
         <Container>
             <MetaTags>
-                <title>1001 Nuggets - Topics</title>
+                <title>1001 Red Pills - Topics</title>
             </MetaTags>
             <Card>
             <Card.Header><Link className="link-theme" to={`/`}>Home</Link> {`>`} Topics</Card.Header>

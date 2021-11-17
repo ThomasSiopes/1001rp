@@ -26,7 +26,7 @@ function Topic () {
     return (
         <Container>
             <MetaTags>
-                <title>1001 Nuggets - {topic.name}</title>
+                <title>1001 Red Pills - {topic.name}</title>
             </MetaTags>
             <Card>
                 <Card.Header><Link className="link-theme" to={`/`}>Home</Link> {`>`} <Link className="link-theme" to={`/topics`}>Topics</Link> {`>`} {topic.name}</Card.Header>

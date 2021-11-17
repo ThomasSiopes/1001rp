@@ -30,7 +30,7 @@ const MoreAuthor = ({name, parent}) => {
     if(quoteList.length) {
         if(parent.topics[0]) {
             return(
-                <Col xs={12} md={6} className="mb-3">
+                <Col xs={12} md={6} lg={12} className="mb-3">
                     <Card className="text-center">
                         <Card.Header>More quotes by {author.name}</Card.Header>
                         <Card.Body>
