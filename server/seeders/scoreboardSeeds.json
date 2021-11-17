@@ -1,0 +1,34 @@
+[
+    {
+        "questions": [
+            {
+                "text": "Which option will you pick?",
+                "choices": [
+                    {"name": "\"Yes\"", "value": 1},
+                    {"name": "\"No\"", "value": 2}
+                ]
+            },
+            {
+                "text": "Which option will you pick this time?",
+                "choices": [
+                    {"name": "This time, \"Yes\"", "value": 1},
+                    {"name": "This time, \"No\"", "value": 2}
+                ]
+            },
+            {
+                "text": "How about now?",
+                "choices": [
+                    {"name": "Let's go with \"Yes\"", "value": 1},
+                    {"name": "Let's go with \"No\"", "value": 2}
+                ]
+            },
+            {
+                "text": "One final prompt:",
+                "choices": [
+                    {"name": "End it with \"Yes\"", "value": 1},
+                    {"name": "End it with \"No\"", "value": 2}
+                ]
+            }
+        ]
+    }
+]
