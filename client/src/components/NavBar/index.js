@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, Redirect } from "react-router-dom";
-import { Navbar, Nav, Container, Form } from "react-bootstrap";
+import { Navbar, Nav, Container, Form, Row, Col } from "react-bootstrap";
 
 class NavBar extends React.Component {
     constructor(props) {
@@ -33,13 +33,23 @@ class NavBar extends React.Component {
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav" className="text-center">
                             <Nav className="me-auto">
-                                <span className="hoverable me-1"><Link id="nav-home" className="nav-link" to={`/`}>Home</Link></span>
-                                <span className="hoverable me-1"><Link id="nav-authors" className="nav-link" to={`/authors`}>Authors</Link></span>
-                                <span className="hoverable me-1"><Link id="nav-topics" className="nav-link" to={`/topics`}>Topics</Link></span>
+                                {/* Small Navbar */}
+                                <Row className="d-flex d-md-none mt-2">
+                                    <Col xs={12}><Link className="nav-link btn btn-theme my-2" to={`/`}><strong>Home</strong></Link></Col>
+                                    <Col xs={12}><Link className="nav-link btn btn-theme my-2" to={`/authors`}><strong>Authors</strong></Link></Col>
+                                    <Col xs={12}><Link className="nav-link btn btn-theme my-2" to={`/topics`}><strong>Topics</strong></Link></Col>
+                                </Row>
+                                
+                                {/* Big Navbar */}
+                                <div className="d-none d-md-block hoverable">
+                                    <span className="mx-1"><Link className="nav-link" to={`/`}>Home</Link></span>
+                                    <span className="mx-1"><Link className="nav-link" to={`/authors`}>Authors</Link></span>
+                                    <span className="mx-1"><Link className="nav-link" to={`/topics`}>Topics</Link></span>
+                                </div>
                             </Nav>
                             <Form onSubmit={this.handleSubmit}>
                                 <input type="text" id="searchTerm" placeholder="Search..." className="me-2 my-2" onChange={this.handleChange}></input>
-                                <input type="submit" value="Submit"></input>
+                                <input type="submit" className="btn btn-theme" value="Search"></input>
                             </Form>
                         </Navbar.Collapse>
                     </Container>
