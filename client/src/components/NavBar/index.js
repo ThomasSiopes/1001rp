@@ -41,10 +41,10 @@ class NavBar extends React.Component {
                                 </Row>
                                 
                                 {/* Big Navbar */}
-                                <div className="d-none d-md-block hoverable">
-                                    <span className="mx-1"><Link className="nav-link" to={`/`}>Home</Link></span>
-                                    <span className="mx-1"><Link className="nav-link" to={`/authors`}>Authors</Link></span>
-                                    <span className="mx-1"><Link className="nav-link" to={`/topics`}>Topics</Link></span>
+                                <div className="d-none d-md-flex">
+                                    <span className="mx-1 hoverable"><Link className="nav-link" to={`/`}>Home</Link></span>
+                                    <span className="mx-1 hoverable"><Link className="nav-link" to={`/authors`}>Authors</Link></span>
+                                    <span className="mx-1 hoverable"><Link className="nav-link" to={`/topics`}>Topics</Link></span>
                                 </div>
                             </Nav>
                             <Form onSubmit={this.handleSubmit}>

@@ -12,7 +12,6 @@ import { QUERY_QUOTE_ID } from "../../utils/queries";
 
 const QOTD = ({input}) => {
     const quoteId = input;
-    console.log(quoteId)
     let { loading, data } = useQuery(QUERY_QUOTE_ID, {
         variables: {quoteId: quoteId},
     })
@@ -22,8 +21,6 @@ const QOTD = ({input}) => {
     }
 
     if(!data) return (<Redirect to={`/404error`}/>);
-
-    console.log(data);
 
     const quote = data.quote;
 

@@ -1,10 +1,7 @@
 # To Do
 - Backend work
     - Deciding which question is displayed
-    - Handling topics that are mostly empty(?)
+- Need new seeding system that doesn't involve deleting older parts of the database
 
 - Frontend work
-    - Footer
-        - Buttons for questionnaire thing
-    - Header
-        - Weird underline border issues?
+    - Buttons for questionnaire thing

@@ -27,7 +27,7 @@ const RandomTopics = () => {
             <Card.Body>
                 <Row>
                     {newList.map((index) => (
-                        <Col xs={12} xl={6} className="mb-3" key={index.name}>
+                        <Col xs={6} sm={12} xl={6} className="mb-3" key={index.name}>
                             <TopicButton type={"link"} name={index.name}/>
                         </Col>
                     ))}

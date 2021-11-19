@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useQuery, useMutation } from "@apollo/client";
 import { Card, Row, Col, Button } from "react-bootstrap";
+import { GiDonkey, GiElephant } from "react-icons/gi";
 
 import { QUERY_SCOREBOARD, QUERY_SCORES } from "../../utils/queries";
 import { MOD_SCORE } from "../../utils/mutations";
@@ -28,14 +29,16 @@ const CurrentQuestion = () => {
         console.log(event)
 
         try {
-            let { data } = modScore({
-                variables: { value: parseInt(event.target.name), score: 1 },
-            });
-            console.log(event.target.name);
+            // let { data } = modScore({
+            //     variables: { value: parseInt(event.target.getAttribute('name')), score: 1 },
+            // });
+            console.log(event.target.getAttribute('name'));
 
             temp = [...scores.localScores]
-            temp.push(parseInt(event.target.name))
+            temp.push(parseInt(event.target.getAttribute('name')))
             setScores({...scores, localScores: temp});
+            console.log("Current Scores:");
+            console.log(scores.localScores);
 
             if(scoreboard && (question.totalIndex < scoreboard.questions.length-1)) {
                 setquestion({...question, totalIndex: question.totalIndex+1});                
@@ -68,6 +71,7 @@ const CurrentQuestion = () => {
 
     const restart = async (event) => {
         event.preventDefault();
+        console.log(question);
 
         try {
             setquestion({...question, totalIndex: 0, end: false});
@@ -92,7 +96,9 @@ const CurrentQuestion = () => {
                             <p>{scoreboard.questions[question.totalIndex].text}</p>
                             <div>
                                 {scoreboard.questions[question.totalIndex].choices.map((index) => (
-                                    <Button variant={"theme"} className="mx-2 mb-2" id={"value" + index.value} name={index.value} key={index.name} onClick={handleChange}>{index.name}</Button>
+                                    <Button variant={"theme"} className="mx-2 mb-2" id={"value" + index.value} name={String(index.value)} key={index.name} onClick={handleChange}>
+                                        {(index.value === 1) ? <GiElephant name={String(index.value)}/> : <GiDonkey name={String(index.value)}/>}
+                                    </Button>
                                 ))}
                             </div>
                     </div>
@@ -106,7 +112,7 @@ const CurrentQuestion = () => {
                                     <Row>
                                         {scores.localScores.map((n) => (
                                             <Col key={n.name + n.value}>
-                                                <p>{n.name} : {n.score}</p>
+                                                <p>{(n.value === 1) ? <GiElephant/> : <GiDonkey/>} : {n.score}</p>
                                             </Col>
                                         ))}
                                     </Row>

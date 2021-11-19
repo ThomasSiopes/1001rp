@@ -37,10 +37,10 @@ function Main() {
                 </Col>
                 <Col xs={12}>
                     <Row className="text-center">
-                        <Col xs={6}>
+                        <Col xs={12} sm={6} className="mb-3">
                             <RandomAuthors/>
                         </Col>
-                        <Col xs={6}>
+                        <Col xs={12} sm={6} className="mb-3">
                             <RandomTopics/>
                         </Col>
                     </Row>

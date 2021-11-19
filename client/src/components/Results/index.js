@@ -33,7 +33,7 @@ const Results = ({type, input}) => {
             <Container className="mb-2">
                 <div>
                     <h5>Results under {type}s . . .</h5>
-                    <hr></hr>
+                    <hr/>
                     <Row className="text-center">
                         {newList.map((index) => (
                             <Col xs={12} sm={6} lg={4} xl={3} className="mb-2" key={index.name}>
