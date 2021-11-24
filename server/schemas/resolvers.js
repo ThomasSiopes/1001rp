@@ -1,5 +1,6 @@
 const { AuthenticationError } = require("apollo-server-express");
 const { Author, Topic, Quote, GenLink, Scoreboard, Score, QOTD } = require("../models");
+const { scoreSeeds } = require("../seeders/scoreSeeds.json");
 
 const resolvers = {
     Query: {
@@ -63,6 +64,15 @@ const resolvers = {
                 process.exit(1);
             }
             return QOTD.find();
+        },
+        clearScore: async () => {
+            try {
+                await Score.deleteMany();
+                await Score.create(scoreSeeds);
+            } catch(err) {
+                console.error(err)
+                process.exit(1);
+            }
         }
     }
 }

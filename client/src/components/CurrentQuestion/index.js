@@ -18,6 +18,7 @@ const CurrentQuestion = () => {
 
     const [scores, setScores] = useState({
         localScores: [],
+        imgPath: 0
     });
 
     let temp;
@@ -26,19 +27,15 @@ const CurrentQuestion = () => {
 
     const handleChange = async (event) => {
         event.preventDefault();
-        console.log(event)
 
         try {
-            // let { data } = modScore({
-            //     variables: { value: parseInt(event.target.getAttribute('name')), score: 1 },
-            // });
-            console.log(event.target.getAttribute('name'));
+            let { data } = modScore({
+                variables: { value: parseInt(event.target.getAttribute('name')), score: 1 },
+            });
 
             temp = [...scores.localScores]
             temp.push(parseInt(event.target.getAttribute('name')))
             setScores({...scores, localScores: temp});
-            console.log("Current Scores:");
-            console.log(scores.localScores);
 
             if(scoreboard && (question.totalIndex < scoreboard.questions.length-1)) {
                 setquestion({...question, totalIndex: question.totalIndex+1});                
@@ -46,7 +43,8 @@ const CurrentQuestion = () => {
                 console.log("End");
 
                 setquestion({...question, end: true});
-                setScores({...scores, localScores: handleLocalScores(temp)});
+                setScores({...scores, localScores: handleLocalScores(temp), imgPath: handleImagePath(temp)});
+                console.log(temp);
             }
         } catch (err) {
             console.log(err);
@@ -54,7 +52,6 @@ const CurrentQuestion = () => {
     }
 
     const handleLocalScores = (input) => {
-        // let newArr = [{name: "Yes", value: 1, score: 0}, {name: "No", value: 2, score: 0}]
         let copy = queryScores.data.scores;
         let newArr = []
         for(let i of copy) {
@@ -67,6 +64,16 @@ const CurrentQuestion = () => {
         }
         
         return(newArr);
+    }
+
+    const handleImagePath = (input) => {
+        let option = 0;
+
+        for(let index of input) {
+            if(index === 1) option++;
+        }
+
+        return ("/assets/images/results/option" + option + ".png");
     }
 
     const restart = async (event) => {
@@ -118,11 +125,14 @@ const CurrentQuestion = () => {
                                     </Row>
                                 </div>
                             </Col>
-                            {/* <Col xs={6}>
-                                <GlobalScores/>
-                            </Col> */}
+                            <Col xs={6}>
+                                <GlobalScores input={scores.localScores}/>
+                            </Col>
                         </Row>
-                        <Button variant={"theme"} onClick={restart}>Start Over</Button>
+                        <Row>
+                            <img src={scores.imgPath}/>
+                        </Row>
+                        {/* <Button variant={"theme"} onClick={restart}>Start Over</Button> */}
                     </div>
                 }
             </Card.Body>

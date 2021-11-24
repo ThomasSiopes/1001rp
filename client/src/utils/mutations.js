@@ -17,3 +17,13 @@ export const SET_QOTD = gql`
         }
     }
 `;
+
+export const CLEAR_SCORE = gql`
+    mutation clearScore {
+        clearScore {
+            name
+            value
+            score
+        }
+    }
+`;

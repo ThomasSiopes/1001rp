@@ -81,6 +81,7 @@ const typeDefs = gql`
     type Mutation {
         modScore(value: Int!, score: Int!): Score
         setQOTD(newID: ID!): [QOTD]
+        clearScore: [Score]
     }
 
 `;
