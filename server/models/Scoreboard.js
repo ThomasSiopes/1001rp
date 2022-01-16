@@ -8,7 +8,7 @@ const option = new Schema({
     value: {
         type: Number,
         required: true,
-    }
+    },
 });
 
 const question = new Schema({
@@ -20,7 +20,15 @@ const question = new Schema({
         {
             type: option,
         }
-    ]
+    ],
+    answer: {
+        type: String,
+        required: false,
+    },
+    opposite: {
+        type: String,
+        required: false,
+    }
 });
 
 const scoreboard = new Schema({

@@ -6,9 +6,7 @@ const typeDefs = gql`
         name: String
         FT: String
         quotes: [Quote]!
-        color: String
-        darkColor: String
-        lightColor: String
+        lastName: String
         thumbnail: String
         links: [Link]!
         description: String
@@ -18,6 +16,7 @@ const typeDefs = gql`
         _id: ID
         name: String
         quotes: [Quote]!
+        orderName: String
     }
 
     type Quote {
@@ -46,6 +45,8 @@ const typeDefs = gql`
     type Question {
         text: String
         choices: [Option]!
+        answer: String
+        opposite: String
     }
 
     type Score {

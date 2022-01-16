@@ -11,6 +11,10 @@ const topicSchema = new Schema({
             ref: "Quote",
         },
     ],
+    orderName: {
+        type: String,
+        required: false,
+    }
 });
 
 const Topic = model("Topic", topicSchema);

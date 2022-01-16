@@ -26,6 +26,10 @@ const authorSchema = new Schema({
         type: String,
         required: false,
     },
+    lastName: {
+        type: String,
+        required: false,
+    },
     links: [
         {
             type: socialLinkSchema,

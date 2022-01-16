@@ -6,28 +6,36 @@
                 "choices": [
                     {"name": "\"Yes\"", "value": 1},
                     {"name": "\"No\"", "value": 2}
-                ]
+                ],
+                "answer": "What you picked.",
+                "opposite": "The opposite of what you picked!"
             },
             {
                 "text": "Which option will you pick this time?",
                 "choices": [
                     {"name": "This time, \"Yes\"", "value": 1},
                     {"name": "This time, \"No\"", "value": 2}
-                ]
+                ],
+                "answer": "What you picked this time.",
+                "opposite": "The opposite this time!"
             },
             {
                 "text": "How about now?",
                 "choices": [
                     {"name": "Let's go with \"Yes\"", "value": 1},
                     {"name": "Let's go with \"No\"", "value": 2}
-                ]
+                ],
+                "answer": "Now this is what you picked.",
+                "opposite": "Now this is the opposite!"
             },
             {
                 "text": "One final prompt:",
                 "choices": [
                     {"name": "End it with \"Yes\"", "value": 1},
                     {"name": "End it with \"No\"", "value": 2}
-                ]
+                ],
+                "answer": "This was your final pick.",
+                "opposite": "The opposite one final time!"
             }
         ]
     }

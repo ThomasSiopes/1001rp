@@ -16,6 +16,7 @@ export const QUERY_AUTHOR_ALL = gql`
                 type
                 link
             }
+            lastName
             description
         }
     }
@@ -37,6 +38,7 @@ export const QUERY_AUTHOR_NAME = gql`
                 type
                 link
             }
+            lastName
             description
         }
     }
@@ -58,6 +60,7 @@ export const QUERY_AUTHOR_ID = gql`
                 type
                 link
             }
+            lastName
             description
         }
     }
@@ -74,6 +77,7 @@ export const QUERY_TOPIC_ALL = gql`
                 author
                 topics
             }
+            orderName
         }
     }
 `;
@@ -89,6 +93,7 @@ export const QUERY_TOPIC_NAME = gql`
                 author
                 topics
             }
+            orderName
         }
     }
 `;
@@ -104,6 +109,7 @@ export const QUERY_TOPIC_ID = gql`
                 author
                 topics
             }
+            orderName
         }
     }
 `;
@@ -150,6 +156,8 @@ export const QUERY_SCOREBOARD = gql`
                     name
                     value
                 }
+                answer
+                opposite
             }
         }
     }

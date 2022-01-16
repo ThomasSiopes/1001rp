@@ -13,7 +13,9 @@ const CurrentQuestion = () => {
     
     const [question, setquestion] = useState({
         totalIndex: 0,
-        end: false
+        end: false,
+        oppositePage: false,
+        lastAnswer: 0
     });
 
     const [scores, setScores] = useState({
@@ -32,22 +34,32 @@ const CurrentQuestion = () => {
             let { data } = modScore({
                 variables: { value: parseInt(event.target.getAttribute('name')), score: 1 },
             });
-
-            temp = [...scores.localScores]
-            temp.push(parseInt(event.target.getAttribute('name')))
-            setScores({...scores, localScores: temp});
-
-            if(scoreboard && (question.totalIndex < scoreboard.questions.length-1)) {
-                setquestion({...question, totalIndex: question.totalIndex+1});                
-            } else {
-                console.log("End");
-
-                setquestion({...question, end: true});
-                setScores({...scores, localScores: handleLocalScores(temp), imgPath: handleImagePath(temp)});
-                console.log(temp);
-            }
+            let newInt = parseInt(event.target.getAttribute('name'))
+            console.log("New Int: " + newInt);
+            
+            setquestion({...question, lastAnswer: newInt, oppositePage: true})
+            console.log("Question: ")
+            console.log(question)
         } catch (err) {
             console.log(err);
+        }
+    }
+
+    const nextQuestion = (event) => {
+        event.preventDefault();
+
+        temp = [...scores.localScores]
+        temp.push(question.lastAnswer);
+        setScores({...scores, localScores: temp});
+
+        if(scoreboard && (question.totalIndex < scoreboard.questions.length-1)) {
+            setquestion({...question, totalIndex: question.totalIndex+1, oppositePage: false});       
+        } else {
+            console.log("End");
+
+            setquestion({...question, oppositePage: false, end: true});
+            setScores({...scores, localScores: handleLocalScores(temp), imgPath: handleImagePath(temp)});
+            console.log(temp);
         }
     }
 
@@ -90,7 +102,7 @@ const CurrentQuestion = () => {
 
     let { loading, data } = useQuery(QUERY_SCOREBOARD);
 
-    if(loading) return <p>Loading...</p>
+    if(loading || !data) return <p>Loading...</p>
 
     const scoreboard = data.scoreboard[0];
 
@@ -98,7 +110,7 @@ const CurrentQuestion = () => {
         <Card>
             <Card.Header className="text-center">Questionnaire</Card.Header>
             <Card.Body className="text-center">
-                { question.end === false &&
+                { (question.end === false) && (question.oppositePage === false) &&
                     <div className="card-text">
                             <p>{scoreboard.questions[question.totalIndex].text}</p>
                             <div>
@@ -108,6 +120,46 @@ const CurrentQuestion = () => {
                                     </Button>
                                 ))}
                             </div>
+                    </div>
+                }
+                {
+                    (question.end === false) && (question.oppositePage === true) &&
+                    <div className="card-text">
+                        <Row>
+                            <Col>
+                                <Card className="bg-theme text-white">
+                                    <Card.Body>
+                                    <Card.Text>{scoreboard.questions[question.totalIndex].answer}</Card.Text>
+                                    <p>
+                                        {question.lastAnswer === 1 && 
+                                            <GiElephant/>
+                                        }
+                                        {question.lastAnswer === 2 &&
+                                            <GiDonkey/>
+                                        }
+                                    </p>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                            <Col>
+                                <Card className="bg-theme text-white">
+                                    <Card.Body>
+                                    <Card.Text>{scoreboard.questions[question.totalIndex].opposite}</Card.Text>
+                                    <p>
+                                        {question.lastAnswer === 1 && 
+                                            <GiDonkey/>
+                                        }
+                                        {question.lastAnswer === 2 &&
+                                            <GiElephant/>
+                                        }
+                                    </p>
+                                    </Card.Body>
+                                </Card>
+                            </Col>
+                            <Col xs={12}>
+                                <Button variant={"theme"} className="mt-3" onClick={nextQuestion}>Next</Button>
+                            </Col>
+                        </Row>
                     </div>
                 }
                 { question.end === true &&
@@ -125,9 +177,9 @@ const CurrentQuestion = () => {
                                     </Row>
                                 </div>
                             </Col>
-                            <Col xs={6}>
+                            {/* <Col xs={6}>
                                 <GlobalScores input={scores.localScores}/>
-                            </Col>
+                            </Col> */}
                         </Row>
                         <Row>
                             <img src={scores.imgPath}/>
