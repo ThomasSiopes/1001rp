@@ -3,7 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { useQuery} from "@apollo/client";
 
 import { Card, Container } from "react-bootstrap";
-import { FaTwitter, FaFacebookF, FaReddit } from "react-icons/fa";
+import { FaTwitter, FaFacebookF } from "react-icons/fa";
 
 import TopicButton from "../../components/TopicButton";
 import AuthorButton from "../../components/AuthorButton";
@@ -43,7 +43,6 @@ const QOTD = ({input}) => {
                 <Card.Body className="text-center">
                     <Link className="mx-2 share-button" to={`https://twitter.com/intent/tweet?url=${window.location.href}`} id="share-twitter"><FaTwitter/></Link>
                     <Link className="mx-2 share-button" to={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`} id="share-facebook"><FaFacebookF/></Link>
-                    <Link className="mx-2 share-button" to={``} id="share-reddit"><FaReddit/></Link>
                 </Card.Body>
             </div>
             {quote.topics.length !== 0 && 

@@ -16,7 +16,7 @@ const typeDefs = gql`
         _id: ID
         name: String
         quotes: [Quote]!
-        orderName: String
+        topicName: String
     }
 
     type Quote {

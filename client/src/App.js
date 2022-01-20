@@ -23,7 +23,7 @@ import AuthorNav from "./pages/AuthorNav";
 import TopicNav from "./pages/TopicNav";
 import Quote from "./pages/Quote";
 import SearchResult from "./pages/SearchResult";
-import Scoreboard from "./pages/Scoreboard";
+// import Scoreboard from "./pages/Scoreboard";
 
 const httpLink = createHttpLink({
   uri: "/graphql",

@@ -17,7 +17,13 @@ function Freethinkers () {
         authorList.push(index);
     }
 
-    authorList = authorList.sort((a, b) => a.name.localeCompare(b.name));
+    let orderSwitch = true;
+    for(let index1 of authorList) {
+        if(index1.lastName === null) orderSwitch = false;
+    }
+
+    if(orderSwitch) authorList = authorList.sort((a,b) => a.lastName.localeCompare(b.lastName));
+    else authorList = authorList.sort((a, b) => a.name.localeCompare(b.name));
 
     const searchFunction = () => {
         let input, filter, group, elements, body, textValue;

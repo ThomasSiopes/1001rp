@@ -77,7 +77,7 @@ export const QUERY_TOPIC_ALL = gql`
                 author
                 topics
             }
-            orderName
+            topicName
         }
     }
 `;
@@ -93,7 +93,7 @@ export const QUERY_TOPIC_NAME = gql`
                 author
                 topics
             }
-            orderName
+            topicName
         }
     }
 `;
@@ -109,7 +109,7 @@ export const QUERY_TOPIC_ID = gql`
                 author
                 topics
             }
-            orderName
+            topicName
         }
     }
 `;

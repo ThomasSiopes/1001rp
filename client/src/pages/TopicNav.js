@@ -20,7 +20,13 @@ function TopicNavigation () {
         sortedList.push(index)
     }
 
-    sortedList = sortedList.sort((a,b) => a.name.localeCompare(b.name));
+    let orderSwitch = true;
+    for(let index1 of sortedList) {
+        if(index1.topicName === null) orderSwitch = false;
+    }
+
+    if(orderSwitch) sortedList = sortedList.sort((a,b) => a.topicName.localeCompare(b.topicName));
+    else sortedList = sortedList.sort((a,b) => a.name.localeCompare(b.name));
 
     const searchFunction = () => {
         let input, filter, group, elements, body, textValue;

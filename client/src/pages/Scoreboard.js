@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { Container, Card, Button } from "react-bootstrap";
 import { useQuery, useMutation } from "@apollo/client";
 import MetaTags from "react-meta-tags";

@@ -11,7 +11,7 @@ const topicSchema = new Schema({
             ref: "Quote",
         },
     ],
-    orderName: {
+    topicName: {
         type: String,
         required: false,
     }

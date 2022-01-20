@@ -6,7 +6,7 @@ import { GiDonkey, GiElephant } from "react-icons/gi";
 import { QUERY_SCOREBOARD, QUERY_SCORES } from "../../utils/queries";
 import { MOD_SCORE } from "../../utils/mutations";
 
-import GlobalScores from "./globalScores";
+// import GlobalScores from "./globalScores";
 
 const CurrentQuestion = () => {    
     const queryScores = useQuery(QUERY_SCORES);
@@ -88,17 +88,17 @@ const CurrentQuestion = () => {
         return ("/assets/images/results/option" + option + ".png");
     }
 
-    const restart = async (event) => {
-        event.preventDefault();
-        console.log(question);
+    // const restart = async (event) => {
+    //     event.preventDefault();
+    //     console.log(question);
 
-        try {
-            setquestion({...question, totalIndex: 0, end: false});
-            setScores({localScores: []})
-        } catch (err) {
-            console.log(err);
-        }
-    }
+    //     try {
+    //         setquestion({...question, totalIndex: 0, end: false});
+    //         setScores({localScores: []})
+    //     } catch (err) {
+    //         console.log(err);
+    //     }
+    // }
 
     let { loading, data } = useQuery(QUERY_SCOREBOARD);
 
@@ -182,7 +182,7 @@ const CurrentQuestion = () => {
                             </Col> */}
                         </Row>
                         <Row>
-                            <img src={scores.imgPath}/>
+                            <img src={scores.imgPath} alt="Scoreboard"/>
                         </Row>
                         {/* <Button variant={"theme"} onClick={restart}>Start Over</Button> */}
                     </div>
