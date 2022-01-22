@@ -22,6 +22,7 @@ function TopicNavigation () {
 
     let orderSwitch = true;
     for(let index1 of sortedList) {
+        console.log(index1.topicName);
         if(index1.topicName === null) orderSwitch = false;
     }
 
