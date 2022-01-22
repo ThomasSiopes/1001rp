@@ -4,7 +4,7 @@ import { useQuery} from "@apollo/client";
 import MetaTags from "react-meta-tags";
 
 import { Container, Row, Col, Card, Carousel, Button } from "react-bootstrap";
-import { FaTwitter, FaFacebookF, FaReddit } from "react-icons/fa";
+import { FaTwitter, FaFacebookF, FaShareSquare } from "react-icons/fa";
 
 import TopicButton from "../components/TopicButton";
 import AuthorButton from "../components/AuthorButton";
@@ -46,9 +46,18 @@ function Quote () {
                                         <Card.Text><strong><AuthorButton type={"link"} name={quote.author}/></strong></Card.Text>
                                     </Card.Body>
                                     <Card.Body className="text-center">
-                                        <Link className="mx-2 share-button" to={`https://twitter.com/intent/tweet?url=${window.location.href}`} id="share-twitter"><FaTwitter/></Link>
-                                        <Link className="mx-2 share-button" to={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`} id="share-facebook"><FaFacebookF/></Link>
-                                        <Link className="mx-2 share-button" to={``} id="share-reddit"><FaReddit/></Link>
+                                        <Link title="Share on Twitter" className="mx-2 share-button" to={`https://twitter.com/intent/tweet?url=${window.location.href}`} id="share-twitter"><FaTwitter/></Link>
+                                        <Link title="Share on Facebook" className="mx-2 share-button" to={`https://www.facebook.com/sharer/sharer.php?u=${window.location.href}`} id="share-facebook"><FaFacebookF/></Link>
+                                        {navigator.share && 
+                                            <button title="Share" className="mobile-share border-0 p-0 mx-2" onClick={function() {
+                                                navigator.share({
+                                                    title: "1001 Red Pills",
+                                                    text: quote.quoteText,
+                                                    url: window.location.href
+                                                })
+                                            }}
+                                            ><FaShareSquare/></button>
+                                        }
                                     </Card.Body>
                                 </div>
                                 {quote.topics.length !== 0 && 

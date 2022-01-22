@@ -107,6 +107,11 @@ export const GlobalStyles = createGlobalStyle`
         min-height: 67vh;
     }
 
+    .mobile-share {
+        background-color: transparent;
+        font-size: 1.7rem;
+    }
+
     #myInput {
         width: 100%;
     }
