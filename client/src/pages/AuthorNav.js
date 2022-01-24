@@ -14,7 +14,8 @@ function Freethinkers () {
 
     let authorList = [];
     for(let index of data.authors){
-        authorList.push(index);
+        console.log(index);
+        if(index.quotes.length > 1) authorList.push(index);
     }
 
     let orderSwitch = true;
