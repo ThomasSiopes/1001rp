@@ -42,9 +42,7 @@ function Author () {
                                 <Card>
                                     <Link to={`/quote/${index._id}`} className="text-black">
                                         <Card.Body>
-                                            <Card.Text>
-                                                "{index.quoteText}"
-                                            </Card.Text>
+                                            <Card.Text className="font-poppins">"{index.quoteText}"</Card.Text>
                                         </Card.Body>
                                     </Link>
                                     {index.topics.length > 0 && 

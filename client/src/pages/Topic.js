@@ -38,7 +38,7 @@ function Topic () {
                                 <Card className="card-height">
                                     <Link to={`/quote/${index._id}`} className="text-black">
                                         <Card.Body className="pb-0">
-                                            <Card.Text>"{index.quoteText}"</Card.Text>
+                                            <Card.Text className="font-poppins">"{index.quoteText}"</Card.Text>
                                         </Card.Body>
                                     </Link>
                                     <Card.Body>

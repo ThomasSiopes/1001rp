@@ -47,10 +47,12 @@ class NavBar extends React.Component {
                                     <span className="mx-1 hoverable"><Link className="nav-link" to={`/topics`}>Topics</Link></span>
                                 </div>
                             </Nav>
-                            <Form onSubmit={this.handleSubmit}>
-                                <input type="text" id="searchTerm" placeholder="Search..." className="me-2 my-2" onChange={this.handleChange}></input>
-                                <input type="submit" className="btn btn-theme" value="Search"></input>
-                            </Form>
+                            <Nav className="text-center">
+                                <Form className="d-flex justify-content-center align-items-center" onSubmit={this.handleSubmit}>
+                                    <input type="text" id="searchTerm" placeholder="Search by name or text..." className="me-2 my-2" onChange={this.handleChange}></input>
+                                    <input type="submit" className="btn btn-theme fw-bold" value="GO"></input>
+                                </Form>
+                            </Nav>
                         </Navbar.Collapse>
                     </Container>
                 </Navbar>

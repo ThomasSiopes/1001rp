@@ -43,6 +43,10 @@ export const GlobalStyles = createGlobalStyle`
         background-color: #333;
     }
 
+    .btn:focus, .btn-check:focus + .btn, .navbar-toggler:focus {
+        box-shadow: none!important;
+    }
+
     .btn-block {
         display: block;
         width: 100%;
@@ -77,6 +81,11 @@ export const GlobalStyles = createGlobalStyle`
 
     .card-title {
         font-weight: 600;
+    }
+
+    .carousel-inner {
+        padding-left: 1rem;
+        padding-right: 1rem;
     }
 
     .font-poppins {
@@ -153,6 +162,11 @@ export const GlobalStyles = createGlobalStyle`
         background-position: center;
         background-repeat: no-repeat;
         background-color: #F8F8F5;
+    }
+
+    #searchTerm {
+        min-width: 70%;
+        max-width: 80%;
     }
 
     .smaller-text {
