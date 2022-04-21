@@ -27,7 +27,7 @@ class NavBar extends React.Component {
         }
         else {        
             return(
-                <Navbar variant="dark" expand="md" className="mb-3">
+                <Navbar variant="dark" bg={"theme"} expand="md" className="mb-3">
                     <Container>
                         <Link className="navbar-brand" to={`/`}><img id="nav-icon" className="me-3" src="/assets/images/thumbnails/background-copy.png" alt="Icon Here"/></Link>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />

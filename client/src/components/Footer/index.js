@@ -13,7 +13,7 @@ const FooterPage = () => {
     const dailyQuote = data.QOTD;
 
     return (
-        <Card id="footer-supreme" bg={"none"} className="text-center text-white mt-4 py-4">
+        <Card id="footer-supreme" bg={"theme"} className="text-center text-white mt-4 py-4">
             <Container className="px-5">
                 <Row>
                     <Col xs={12} md={4} className="d-flex font-Lato">

@@ -17,7 +17,7 @@ const TopicButton = ({type, name}) => {
 
     if(type === "button") {
         return (
-            <Link to={`/topic/${topic._id}`} className="mx-1 mb-2 btn btn-weak">{name}</Link>
+            <Link to={`/topic/${topic._id}`} className="mx-1 mb-2 btn btn-theme">{name}</Link>
         )
     } else if(type === "link") {
         return (

@@ -19,7 +19,7 @@ export const newTheme = {
 }
 
 export const GlobalStyles = createGlobalStyle`
-    .navbar, .bg-none {
+    .bg-none {
         background-color: transparent!important;
     }
 
@@ -32,15 +32,14 @@ export const GlobalStyles = createGlobalStyle`
     }
 
     .bg-theme {
-        background-color: ${(props) => props.theme.c3};
+        background-color: ${(props) => props.theme.c1};
     }
 
     body { 
-        background-image: url("/assets/images/thumbnails/bg.png");
         background-size: 100% 100%;
         background-position: top;
         background-repeat: no-repeat;
-        background-color: #333;
+        background-color: #FFF;
     }
 
     .btn:focus, .btn-check:focus + .btn, .navbar-toggler:focus {
