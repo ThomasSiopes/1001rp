@@ -2,6 +2,7 @@
 
 # dependencies
 /node_modules
+/seeders
 /.pnp
 .pnp.js
 
