@@ -40,7 +40,7 @@ function Author () {
                         {author.quotes.map((index) => (
                             <Col xs={12} md={6} lg={4} key={index.quoteText} className="mb-3">
                                 <Card>
-                                    <Link to={`/quote/${index._id}`} className="text-black">
+                                    <Link to={`/quote/${index.realID}`} className="text-black">
                                         <Card.Body>
                                             <Card.Text className="font-poppins">"{index.quoteText}"</Card.Text>
                                         </Card.Body>

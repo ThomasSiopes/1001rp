@@ -24,6 +24,7 @@ const typeDefs = gql`
         quoteText: String
         author: String
         topics: [String]!
+        realID: String
     }
 
     type Link {
@@ -73,6 +74,7 @@ const typeDefs = gql`
         topicID(topicId: ID): Topic
         quotes: [Quote]
         quote(quoteId: ID): Quote
+        quoteR(quoteRealId: String): Quote
         genLinks: [GenLink]
         scoreboard: [Scoreboard]
         scores: [Score]

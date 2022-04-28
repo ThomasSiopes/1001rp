@@ -28,6 +28,9 @@ const resolvers = {
         quote: async (parent, { quoteId }) => {
             return Quote.findOne({ _id: quoteId })
         },
+        quoteR: async (parent, { quoteRealId }) => {
+            return Quote.findOne({ realID: quoteRealId })
+        },
         genLinks: async () => {
             return GenLink.find();
         },

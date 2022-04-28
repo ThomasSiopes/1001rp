@@ -11,15 +11,16 @@ import AuthorButton from "../components/AuthorButton";
 import MoreAuthor from "../components/MoreAuthor";
 import MoreTopic from "../components/MoreTopic";
 
-import { QUERY_QUOTE_ID } from "../utils/queries";
+// import { QUERY_QUOTE_ID } from "../utils/queries";
+import { QUERY_QUOTE_REALID } from "../utils/queries";
 
 function Quote () {
-    const { quoteId } = useParams();
-    let { loading, data } = useQuery(QUERY_QUOTE_ID, {
-        variables: {quoteId: quoteId},
+    const { quoteRealId } = useParams();
+    let { loading, data } = useQuery(QUERY_QUOTE_REALID, {
+        variables: {quoteRealId: quoteRealId},
     })
 
-    if(!quoteId || quoteId === null || quoteId === "undefined") return (<Redirect to={`/`}/>);
+    if(!quoteRealId || quoteRealId === null || quoteRealId === "undefined") return (<Redirect to={`/`}/>);
 
     if(loading) {
         return <div className="loadingPage">Loading...</div>;
@@ -27,7 +28,7 @@ function Quote () {
 
     if(!data) return (<Redirect to={`/404error`}/>);
 
-    const quote = data.quote;
+    const quote = data.quoteR;
 
     return (
         <Container>

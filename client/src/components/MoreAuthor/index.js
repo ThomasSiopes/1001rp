@@ -36,7 +36,7 @@ const MoreAuthor = ({name, parent}) => {
                         <Card.Body>
                             {quoteList.map((index) => (
                                 <Card.Text key={index.quoteText}>
-                                    <Link to={`/quote/${index._id}`} className="link-theme"><strong>"{index.quoteText}"</strong></Link>
+                                    <Link to={`/quote/${index.realID}`} className="link-theme"><strong>"{index.quoteText}"</strong></Link>
                                 </Card.Text>
                             ))}
                         </Card.Body>
@@ -51,7 +51,7 @@ const MoreAuthor = ({name, parent}) => {
                     <Card.Body>
                         {quoteList.map((index) => (
                             <Card.Text key={index.quoteText}>
-                                <Link to={`/quote/${index._id}`} className="link-theme"><strong>"{index.quoteText}"</strong></Link>
+                                <Link to={`/quote/${index.realID}`} className="link-theme"><strong>"{index.quoteText}"</strong></Link>
                             </Card.Text>
                         ))}
                     </Card.Body>
