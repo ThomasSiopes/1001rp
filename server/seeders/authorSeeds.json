@@ -72,6 +72,7 @@
 	{"name": "Ben Bova", "lastName": "BenBova"},	
 	{"name": "James Bovard", "lastName": "BovardJames"},
 	{"name": "Jermaine Bowe", "lastName": "BoweJermaine"},
+	{"name": "Kyle Bradelle", "lastName": "BradelleKyle"},
 	{"name": "John Bradshaw", "lastName": "BradshawJohn"},
 	{"name": "Toby Bradshaw", "lastName": "BradshawToby"},
 	{"name": "Louis D. Brandeis", "lastName": "BrandiesLouis"},
@@ -100,6 +101,7 @@
 	{"name": "Shawna Burley", "lastName": "BurleyShawna"},
 	{"name": "Mark Burns", "lastName": "BurnsMark"},
 	{"name": "Bill Burr", "lastName": "BurrBill"},
+	{"name": "Sarah Beth Burwick", "lastName": "BurwickSarah"},
 	{"name": "George W. Bush", "lastName": "BushGeorgeW"},
 
 	{"name": "Herman Cain", "lastName": "CainHerman"},
@@ -132,6 +134,7 @@
 	{"name": "Winston Churchill", "lastName": "ChurchillWinston"},
 	{"name": "Cicero", "lastName": "Cicero"},
 	{"name": "David A. Clarke, Jr.", "lastName": "ClarkeDavidAJr"},
+	{"name": "Coconut Conservative @CoconutConserv", "lastName": "CoconutConservative"},
 	{"name": "Grover Cleveland", "lastName": "ClevelandGrover"},
 	{"name": "Sir Edward Coke", "lastName": "CokeEdward"},
 	{"name": "Chance Coleman", "lastName": "ColemanChance"},
@@ -209,6 +212,7 @@
 	{"name": "Michel Eyquem de Montaigne", "lastName": "EyquemdeMontaigneMichel"},
 
 	{"name": "Nick Fad", "lastName": "FadNick"},
+	{"name": "Jimmy Failla", "lastName": "FaillaJim"},
 	{"name": "Henry P. Fairchild", "lastName": "FairchildHenryP"},
 	{"name": "Barry J. Farber", "lastName": "FarberBarry"},
 	{"name": "Thomas Farrell", "lastName": "FarrellThomas"},
@@ -259,6 +263,7 @@
 	{"name": "Oliver Goldsmith", "lastName": "GoldsmithOliver"},
 	{"name": "Barry Goldwater", "lastName": "GoldwaterBarry"},
 	{"name": "Jimmy Gomez", "lastName": "GomezJimmy"},
+	{"name": "Sara Gonzalez", "lastName": "GonzalezSara"},
 	{"name": "Virgil Goode", "lastName": "GoodeVirgil"},
 	{"name": "Arthur Gore", "lastName": "GoreArthur"},
 	{"name": "Gothix @gothixTV", "lastName": "Gothix"},
@@ -470,6 +475,7 @@
 	{"name": "Edward R. Murrow", "lastName": "MurrowEdwardR"},
 	{"name": "Elon Musk", "lastName": "MuskElon"},
 
+	{"name": "Rep. Troy Nehls", "lastName": "NehlsTroy"},
 	{"name": "Benjamin Netanyahu", "lastName": "NetanyahuBenjamin"},
 	{"name": "Friedrich Nietzsche", "lastName": "NietzscheFriedrich"},
 	{"name": "Albert Jay Nock", "lastName": "NockAlbertJay"},
@@ -531,6 +537,7 @@
 	{"name": "Dennis Prager", "lastName": "PragerDennis"},
 	{"name": "Chad Prather", "lastName": "PratherChad"},
 	{"name": "Billy Prempeh", "lastName": "PrempehBilly"},
+	{"name": "Greg Price", "lastName": "PriceGreg"},
 
 	{"name": "Colin Quinn", "lastName": "QuinnColin"},
 
@@ -570,6 +577,7 @@
 	{"name": "Andy Rooney", "lastName": "RooneyAndy"},
 	{"name": "Franklin D. Roosevelt", "lastName": "RooseveltFranklinD"},
 	{"name": "Theodore Roosevelt", "lastName": "RooseveltTheodore"},
+	{"name": "Farrell Ross", "lastName": "RossFarrell"},
 	{"name": "John Ross", "lastName": "RossJohn"},
 	{"name": "Lyle H. Rossiter, Jr.", "lastName": "RossiterLyleHJr"},
 	{"name": "Murray N. Rothbard", "lastName": "RothbardMurray"},
@@ -596,6 +604,7 @@
 	{"name": "Phyllis Schlafly", "lastName": "SchlaflyPhyllis"},
 	{"name": "Mercedes Schlapp", "lastName": "SchlappMercedes"},
 	{"name": "Arthur Schnitzler", "lastName": "SchnitzlerArthur"},
+	{"name": "Isaac Schorr", "lastName": "SchorrIsaac"},
 	{"name": "Philip Schuyler", "lastName": "SchuylerPhilip"},
 	{"name": "Dr. Darrell Scott", "lastName": "ScottDarrell"},
 	{"name": "Tom Segura", "lastName": "SeguraTom"},
